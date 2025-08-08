@@ -47,7 +47,7 @@ def send_pending_news():
                 logger.error(f"Falha ao enviar noticia. E: {e}")
             time.sleep(2)
 
-        #await conn.execute("UPDATE news SET processed = TRUE WHERE processed = FALSE;")
+        await conn.execute("UPDATE news SET processed = TRUE WHERE processed = FALSE;")
 
     run(_send())
 
